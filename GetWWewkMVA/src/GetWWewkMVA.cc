@@ -2,8 +2,8 @@
 
 GetWWewkMVA::GetWWewkMVA():isInit(false){
  init(
-   "BDT",
- getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_2j_BDT.weights.xml")
+   "BDTG",
+ getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_WWewk_BDTG.weights.xml")
      );
 }
 
@@ -17,7 +17,7 @@ void GetWWewkMVA::init(std::string methodName, std::string weightsfile){
 
  theReader = new TMVA::Reader();
 
- theReader->AddVariable("jetpt1",       &jetpt1_]);
+ theReader->AddVariable("jetpt1",       &jetpt1_);
  theReader->AddVariable("jetpt2",       &jetpt2_);
  theReader->AddVariable("detajj",       &detajj_);
  theReader->AddVariable("log(mjj)",     &logmjj_);
@@ -65,7 +65,7 @@ double GetWWewkMVA::getValue(
     ptll = ptll_;
     zeppl1 = zeppl1_;
     zeppl2 = zeppl2_;
-    zeppll = zepll_;
+    zeppll = zeppll_;
     dphilljetjet = dphilljetjet_; 
 
     return theReader->EvaluateMVA( methodname_ );
