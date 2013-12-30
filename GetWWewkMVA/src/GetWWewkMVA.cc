@@ -1,14 +1,14 @@
 #include "WWewkMvaInCMSSW/GetWWewkMVA/interface/GetWWewkMVA.h"
 
 GetWWewkMVA::GetWWewkMVA():isInit(false){
- init(
-   "MLP",
- getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_WWewk_MLP.weights.xml")
-     );
 //  init(
-//    "BDTG",
-//  getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_WWewk_BDTG.weights.xml")
+//    "MLP",
+//  getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_WWewk_MLP.weights.xml")
 //      );
+ init(
+   "BDTG",
+ getenv("CMSSW_BASE")+std::string("/src/WWewkMvaInCMSSW/GetWWewkMVA/data/TMVA_WWewk_BDTG.weights.xml")
+     );
 }
 
 GetWWewkMVA::~GetWWewkMVA(){
