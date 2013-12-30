@@ -11,7 +11,7 @@ class GetWWewkMVA {
 
   void init(std::string methodName, std::string weightsfile);
 //   double getValue(double jetpt1,double jetpt2,double detajj,double logmjj,double pt1,double pt2,double ptll,double zeppl1,double zeppl2,double zeppll,double dphilljetjet);
-  double getValue(double jetpt1,double jetpt2,double detajj,double logmjj,double zeppl1,double zeppl2,double zeppll);
+  double getValue(double jetpt1,double jetpt2,double detajj,double logmjj,double zeppl1,double zeppl2,double zeppll,double dphilljetjet);
 
  private:
 
@@ -28,7 +28,7 @@ class GetWWewkMVA {
   float zeppl1_;
   float zeppl2_;
   float zeppll_;
-//   float dphilljetjet_;
+  float dphilljetjet_;
 
   std::string methodname_;
 
