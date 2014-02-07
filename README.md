@@ -5,6 +5,8 @@ WW2jewk Mva in cmssw
 
 - to be loaded in cmssw
 
+        In the same way of DYmva code
+
 - to be used within the gardener
 
 
@@ -14,4 +16,4 @@ WW2jewk Mva in cmssw
 
 
 
-NB: it's similar to DYmva code
+
