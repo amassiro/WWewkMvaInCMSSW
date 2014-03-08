@@ -60,16 +60,16 @@ double GetWWewkMVA::getValue(
      return -999.;
     }
 
-    jetpt1_ = jetpt1_;
-    jetpt2_ = jetpt2_;
-    detajj = detajj_;
-    logmjj = logmjj_;
+    jetpt1_ = jetpt1;
+    jetpt2_ = jetpt2;
+    detajj_ = detajj;
+    logmjj_ = logmjj;
 //     pt1 = pt1_;
 //     pt2 = pt2_;
 //     ptll = ptll_;
-    zeppl1 = zeppl1_;
-    zeppl2 = zeppl2_;
-    zeppll = zeppll_;
+    zeppl1_ = zeppl1;
+    zeppl2_ = zeppl2;
+    zeppll_ = zeppll;
 //     dphilljetjet = dphilljetjet_; 
 
     return theReader->EvaluateMVA( methodname_ );
