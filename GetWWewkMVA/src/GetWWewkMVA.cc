@@ -31,8 +31,11 @@ void GetWWewkMVA::init(std::string methodName, std::string weightsfile){
 
  theReader->AddVariable("abs(eta1-(jeteta1+jeteta2)/2)/detajj", &zeppl1_);
  theReader->AddVariable("abs(eta2-(jeteta1+jeteta2)/2)/detajj", &zeppl2_);
- theReader->AddVariable("abs(yll-(jeteta1+jeteta2)/2)/detajj",  &zeppll_);
+//  theReader->AddVariable("abs(yll-(jeteta1+jeteta2)/2)/detajj",  &zeppll_);
 //  theReader->AddVariable("dphilljetjet",    &dphilljetjet_);
+
+ theReader->AddVariable( "sqrt((Ml1j1-100)*(Ml1j1-100)+(Ml1j2-100)*(Ml1j2-100))" , &Ml1jradius_);
+ theReader->AddVariable( "sqrt((Ml2j1-100)*(Ml2j1-100)+(Ml2j2-100)*(Ml2j2-100))" , &Ml2jradius_);
 
  theReader->BookMVA(methodName,weightsfile);
 
@@ -51,7 +54,9 @@ double GetWWewkMVA::getValue(
 //    double ptll,
    double zeppl1,
    double zeppl2,
-   double zeppll
+//    double zeppll,
+   double Ml1jradius,
+   double Ml2jradius
 //    double dphilljetjet
                           ){
 
@@ -69,9 +74,13 @@ double GetWWewkMVA::getValue(
 //     ptll = ptll_;
     zeppl1_ = zeppl1;
     zeppl2_ = zeppl2;
-    zeppll_ = zeppll;
+//     zeppll_ = zeppll;
 //     dphilljetjet = dphilljetjet_; 
+
+    Ml1jradius_ = Ml1jradius;
+    Ml2jradius_ = Ml2jradius;
 
     return theReader->EvaluateMVA( methodname_ );
 
-                          }
+}
+
